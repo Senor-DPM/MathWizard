@@ -1,4 +1,5 @@
 import random as r
+import HCF_LCM_Module as hl
 
 def Fraction_Type(count):
     Type_List=["U","P","I"]
@@ -29,7 +30,7 @@ def Fraction_Type(count):
         print("Correct answer. One point awarded.")
         count+=1
     elif type_answer!=user_type:
-        print("Incorrect answer. No points awarded.")
+        print(f"Incorrect answer. The correct type was {type_answer} No points awarded.")
     
     return count
 
@@ -59,5 +60,159 @@ def FracToDec(d,count):
         count+=1
     elif user_dec!=deci:
         print(f"Wrong answer. The correct answer was {deci}.No points given.")
+    
+    return count
+
+def AddFrac(d,count):
+    if d==1:
+        nume1=r.randint(1,10)
+        denom1=r.randint(1,10)
+        if nume1>denom1:
+            nume1, denom1 == denom1, nume1
+        nume2=r.randint(1,10)
+        denom2=r.randint(1,10)
+        if nume2>denom2:
+            nume2, denom2 == denom2, nume2
+    
+    elif d==2:
+        nume1=r.randint(1,25)
+        denom1=r.randint(1,25)
+        nume2=r.randint(1,25)
+        denom2=r.randint(1,25)
+    
+    elif d==3:
+        numlist=[x for x in range(-30,30) if x!=0 or x!=1 or x!=-1]
+        nume1=numlist[r.randint(0,len(numlist)-1)]
+        denom1=numlist[r.randint(0,len(numlist)-1)]
+        nume2=numlist[r.randint(0,len(numlist)-1)]
+        denom2=numlist[r.randint(0,len(numlist)-1)]
+
+        if nume1<0 and denom1<0:
+            nume1, denom1 = -nume1, -denom1
+        if nume2<0 and denom2<0:
+            nume2, denom2 = -nume2, -denom2
+
+    frac1=f'{nume1}/{denom1}'
+    frac2=f'{nume2}/{denom2}'
+        
+    if denom1==denom2:
+        denom_s=denom1
+        nume_s = nume1+nume2
+        if nume_s>denom_s:
+            smaller = denom_s
+        else:
+            smaller = nume_s
+        for i in range(2,smaller+1):
+            if nume_s%i==0 and denom_s%i==0:
+                while nume_s%i and denom_s%i:
+                    nume_s, denom_s = nume_s%i, denom_s%i
+        
+        if nume_s<0 and denom_s<0:
+            nume_s, denom_s = -nume_s, -denom_s
+        frac_sum = f"{nume_s}/{denom_s}"
+    
+    elif denom1!=denom2:
+        denom_s=hl.compute_lcm(denom1,denom2)
+        nume_s = (nume1*(denom_s//denom1)) + (nume2*(denom_s//denom2))
+        if nume_s>denom_s:
+            smaller = denom_s
+        else:
+            smaller = nume_s
+        for i in range(2,smaller+1):
+            if nume_s%i==0 and denom_s%i==0:
+                while nume_s%i and denom_s%i:
+                    nume_s, denom_s = nume_s%i, denom_s%i
+        
+        if nume_s<0 and denom_s<0:
+            nume_s, denom_s = -nume_s, -denom_s
+        frac_sum = f"{nume_s}/{denom_s}"
+        
+
+    print("Find the sum of the fractions in simplified form: ",frac1,"+",frac2)
+    frac_user=input("Sum : ")
+
+    if frac_user==frac_sum:
+        print("Correct answer. One point awarded")
+        count+=1
+    else:
+        print(f"Wrong answer. The correct answer is {frac_sum} No points awarded")
+    
+    return count
+
+
+
+def SubtractFrac(d,count):
+    if d==1:
+        nume1=r.randint(1,10)
+        denom1=r.randint(1,10)
+        if nume1>denom1:
+            nume1, denom1 == denom1, nume1
+        nume2=r.randint(1,10)
+        denom2=r.randint(1,10)
+        if nume2>denom2:
+            nume2, denom2 == denom2, nume2
+    
+    elif d==2:
+        nume1=r.randint(1,25)
+        denom1=r.randint(1,25)
+        nume2=r.randint(1,25)
+        denom2=r.randint(1,25)
+    
+    elif d==3:
+        numlist=[x for x in range(-30,30) if x!=0 or x!=1 or x!=-1]
+        nume1=numlist[r.randint(0,len(numlist)-1)]
+        denom1=numlist[r.randint(0,len(numlist)-1)]
+        nume2=numlist[r.randint(0,len(numlist)-1)]
+        denom2=numlist[r.randint(0,len(numlist)-1)]
+
+        if nume1<0 and denom1<0:
+            nume1, denom1 = -nume1, -denom1
+        if nume2<0 and denom2<0:
+            nume2, denom2 = -nume2, -denom2
+
+    frac1=f'{nume1}/{denom1}'
+    frac2=f'{nume2}/{denom2}'
+        
+    if denom1==denom2:
+        denom_s=denom1
+        nume_s = nume1-nume2
+        if nume_s>denom_s:
+            smaller = denom_s
+        else:
+            smaller = nume_s
+        for i in range(2,smaller+1):
+            if nume_s%i==0 and denom_s%i==0:
+                while nume_s%i and denom_s%i:
+                    nume_s, denom_s = nume_s%i, denom_s%i
+        
+        if nume_s<0 and denom_s<0:
+            nume_s, denom_s = -nume_s, -denom_s
+        frac_diff = f"{nume_s}/{denom_s}"
+    
+    elif denom1!=denom2:
+        denom_s=hl.compute_lcm(denom1,denom2)
+        nume_s = (nume1*(denom_s//denom1)) - (nume2*(denom_s//denom2))
+        if nume_s>denom_s:
+            smaller = denom_s
+        else:
+            smaller = nume_s
+        for j in range(2,smaller+1):
+            if nume_s%j==0 and denom_s%j==0:
+                while nume_s%j and denom_s%j:
+                    nume_s, denom_s = nume_s%j, denom_s%j
+        
+        if nume_s<0 and denom_s<0:
+            nume_s, denom_s = -nume_s, -denom_s
+        frac_diff = f"{nume_s}/{denom_s}"
+        
+
+    print("Find the difference of the fractions in simplified form: ",frac1,"-",frac2)
+    frac_user=input("Difference : ")
+
+    if frac_user==frac_diff:
+        print("Correct answer. One point awarded")
+        count+=1
+    else:
+        print(f"Wrong answer. The correct answer is {frac_diff} No points awarded")
     
     return count

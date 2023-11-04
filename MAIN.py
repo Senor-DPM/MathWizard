@@ -388,6 +388,9 @@ while True:
             elif topics==7:
                 while True:
                     print("1 : Types of Fraction")
+                    print("2 : Convert Fractions to Decimal")
+                    print("3 : Sum of Fractions")
+                    print("4 : Difference of Fractions")
                     print("0 : Go Back")
                     while True:
                         try:
@@ -414,6 +417,26 @@ while True:
                                 continue
                             ques=int(ques)
                             FracToDec_Main(ques)
+                            goback=True
+                            break
+                    
+                    if choice==3:
+                            ques=input("How many questions : ")
+                            if not str(ques).isdigit():
+                                print("Invalid Input. Please try again.")
+                                continue
+                            ques=int(ques)
+                            AddFrac_Main(ques)
+                            goback=True
+                            break
+                    
+                    if choice==4:
+                            ques=input("How many questions : ")
+                            if not str(ques).isdigit():
+                                print("Invalid Input. Please try again.")
+                                continue
+                            ques=int(ques)
+                            SubtractFrac_Main(ques)
                             goback=True
                             break
                     

@@ -16,7 +16,7 @@ def Add_Main(ques):
             print("Invalid Input. Please try again.")
     if diff not in [1,2,3,4]:
         print("Error. Try again please.")
-        Add_Main()
+        Add_Main(ques)
     else:
         count=0
         for i in range(0,ques):
@@ -35,7 +35,7 @@ def Subtract_Main(ques):
             print("Invalid Input. Please try again.")
     if diff not in [1,2,3,4]:
         print("Error. Try again please.")
-        Subtract_Main()
+        Subtract_Main(ques)
     else:
         count=0
         for i in range(0,ques):
@@ -54,7 +54,7 @@ def Multiply_Main(ques):
             print("Invalid Input. Please try again.")
     if diff not in [1,2,3,4]:
         print("Error. Try again please.")
-        Multiply_Main()
+        Multiply_Main(ques)
     else:
         count=0
         for i in range(0,ques):
@@ -73,7 +73,7 @@ def Divide_Main(ques):
             print("Invalid Input. Please try again.")
     if diff not in [1,2,3,4]:
         print("Error. Try again please.")
-        Divide_Main()
+        Divide_Main(ques)
     else:
         count=0
         for i in range(0,ques):
@@ -87,14 +87,14 @@ def Divide_Main(ques):
 def Add_Int_Main(ques):
     while True:
         try:
-            diff = int(input("Enter the difficulty(1-2) : "))
+            diff = int(input("Enter the difficulty(1-4) : "))
             print()
             break
         except ValueError:
             print("Invalid Input. Please try again.")
     if diff not in [1,2,3,4]:
         print("Error. Try again please.")
-        Add_Int_Main()
+        Add_Int_Main(ques)
     else:
         count=0
         for i in range(0,ques):
@@ -113,7 +113,7 @@ def Subtract_Int_Main(ques):
             print("Invalid Input. Please try again.")
     if diff not in [1,2,3,4]:
         print("Error. Try again please.")
-        Subtract_Int_Main()
+        Subtract_Int_Main(ques)
     else:
         count=0
         for i in range(0,ques):
@@ -132,7 +132,7 @@ def Multiply_Int_Main(ques):
             print("Invalid Input. Please try again.")
     if diff not in [1,2,3,4]:
         print("Error. Try again please.")
-        Multiply_Int_Main()
+        Multiply_Int_Main(ques)
     else:
         count=0
         for i in range(0,ques):
@@ -151,7 +151,7 @@ def Divide_Int_Main(ques):
             print("Invalid Input. Please try again.")
     if diff not in [1,2,3,4]:
         print("Error. Try again please.")
-        Divide_Int_Main()
+        Divide_Int_Main(ques)
     else:
         count=0
         for i in range(0,ques):
@@ -172,7 +172,7 @@ def Add_Rat_Main(ques):
             print("Invalid Input. Please try again.")
     if diff not in [1,2,3,4]:
         print("Error. Try again please.")
-        Add_Rat_Main()
+        Add_Rat_Main(ques)
     else:
         count=0
         for i in range(0,ques):
@@ -191,7 +191,7 @@ def Subtract_Rat_Main(ques):
             print("Invalid Input. Please try again.")
     if diff not in [1,2,3,4]:
         print("Error. Try again please.")
-        Subtract_Rat_Main()
+        Subtract_Rat_Main(ques)
     else:
         count=0
         for i in range(0,ques):
@@ -210,7 +210,7 @@ def Multiply_Rat_Main(ques):
             print("Invalid Input. Please try again.")
     if diff not in [1,2,3,4]:
         print("Error. Try again please.")
-        Multiply_Rat_Main()
+        Multiply_Rat_Main(ques)
     else:
         count=0
         for i in range(0,ques):
@@ -229,7 +229,7 @@ def Divide_Rat_Main(ques):
             print("Invalid Input. Please try again.")
     if diff not in [1,2,3,4]:
         print("Error. Try again please.")
-        Divide_Rat_Main()
+        Divide_Rat_Main(ques)
     else:
         count=0
         for i in range(0,ques):
@@ -250,7 +250,7 @@ def AP_Square_Main(ques):
             print("Invalid Input. Please try again.")
     if diff not in [1,2,3]:
         print("Invalid input. Try again please.")
-        AP_Square_Main()
+        AP_Square_Main(ques)
     else:
         count=0
         for i in range(0,ques):
@@ -269,7 +269,7 @@ def AP_Rectangle_Main(ques):
             print("Invalid Input. Please try again.")
     if diff not in [1,2,3]:
         print("Invalid input. Try again please.")
-        AP_Rectangle_Main()
+        AP_Rectangle_Main(ques)
     else:
         count=0
         for i in range(0,ques):
@@ -297,7 +297,7 @@ def AP_Circle_Main(ques):
             print("Invalid Input. Please try again.")
     if diff not in [1,2]:
         print("Invlaid Input. Please try again.")
-        AP_Circle_Main()
+        AP_Circle_Main(ques)
     else:
         count=0
         for i in range(0,ques):
@@ -415,7 +415,7 @@ def LE_Single_Main(ques):
             print("Invalid Input. Please try again.")
     if diff not in [1,2]:
         print("Invalid Input. Please try again.")
-        LE_Single_Main()
+        LE_Single_Main(ques)
     else:
         count=0
         for i in range(0,ques):
@@ -449,6 +449,44 @@ def FracToDec_Main(ques):
         count=0
         for i in range(0,ques):
             count=FracToDec(diff,count)
+    
+    print("You have earned",count,"out of",ques,"points.")
+    print()
+
+def AddFrac_Main(ques):
+    while True:
+        try:
+            diff = int(input("Enter the difficulty(1-3) : "))
+            print()
+            break
+        except ValueError:
+            print("Invalid Input. Please try again.")
+    if diff not in [1,2,3]:
+        print("Invalid Input. Please try again.")
+        AddFrac_Main(ques)
+    else:
+        count=0
+        for i in range(0,ques):
+            count=AddFrac(diff,count)
+    
+    print("You have earned",count,"out of",ques,"points.")
+    print()
+
+def SubtractFrac_Main(ques):
+    while True:
+        try:
+            diff = int(input("Enter the difficulty(1-3) : "))
+            print()
+            break
+        except ValueError:
+            print("Invalid Input. Please try again.")
+    if diff not in [1,2,3]:
+        print("Invalid Input. Please try again.")
+        SubtractFrac_Main(ques)
+    else:
+        count=0
+        for i in range(0,ques):
+            count=SubtractFrac(diff,count)
     
     print("You have earned",count,"out of",ques,"points.")
     print()
