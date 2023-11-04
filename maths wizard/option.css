@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+} 
+
+body{
+    font-family: 'Montserrat',sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: absolute;
+    bottom: 0;
+    background: #7766c6; 
+}
+
+h2{
+    padding: 0px;
+    position: absolute;
+    bottom: 280px;
+    left: 620px;
+    text-align: center;
+    color: #fff;
+}
+
+.options-container {
+    text-align: center;
+    margin: 20px;
+    position: absolute;
+    top: 200px;
+    padding-bottom: 0px;
+    padding-left: 220px;
+  }
+  
+  .slider-container {
+    width: 100%;
+    margin: 20px auto;
+  }
+  
+  .slider {
+    width: 100%;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .option-box {
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .option-box:hover {
+    background-color: #e0e0e0;
+  }
+
+  .goback-button {
+    padding: 10px 20px;
+    background-color: #46467a;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    width: 10%;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 160px; 
+    position: absolute;
+    left: 515px;
+    bottom: 10px; 
+  }
+  .goback-button:hover {
+    background-color: #6161a7;
+  }
