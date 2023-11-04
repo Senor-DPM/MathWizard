@@ -21,15 +21,15 @@ def AP_Square(d,c):
         print()
         return c+1
     elif user_a==area and user_p!=perimeter:
-        print("Only area is correct. Half point awarded.")
+        print(f"Only area is correct. Half point awarded. \nCorrect area : {area} \t\t Correct perimeter : {perimeter}")
         print()
         return c+0.5
     elif user_a!=area and user_p==perimeter:
-        print("Only perimeter is correct. Half point awarded.")
+        print(f"Only perimeter is correct. Half point awarded. \nCorrect area : {area} \t\t Correct perimeter : {perimeter}")
         print()
         return c+0.5
     else:
-        print("Incorrect answer. No points given.")
+        print(f"Incorrect answer. No points given. \nCorrect area : {area} \t\t Correct perimeter : {perimeter}")
         print()
         return c
 
@@ -58,15 +58,15 @@ def AP_Rectangle(d,c):
         print()
         return c+1
     elif user_a==area and user_p!=perimeter:
-        print("Only area is correct. Half point awarded.")
+        print(f"Only area is correct. Half point awarded. \nCorrect area : {area} \t\t Correct perimeter : {perimeter}")
         print()
         return c+0.5
     elif user_a!=area and user_p==perimeter:
-        print("Only perimeter is correct. Half point awarded.")
+        print(f"Only perimeter is correct. Half point awarded. \nCorrect area : {area} \t\t Correct perimeter : {perimeter}")
         print()
         return c+0.5
     else:
-        print("Incorrect answer. No points given.")
+        print(f"Incorrect answer. No points given. \nCorrect area : {area} \t\t Correct perimeter : {perimeter}")
         print()
         return c
     
@@ -88,15 +88,15 @@ def AP_Trapezium(c):
         except:
             print("Invalid input. Please enter a real number.")
     if user_a==area and user_p==perimeter:
-        print("Both are correct! One point awarded")
+        print(f"Both are correct! One point awarded. \nCorrect area : {area} \t\t Correct perimeter : {perimeter}")
         print()
         return c+1
     elif user_a==area and user_p!=perimeter:
-        print("Only area is correct. Half point awarded.")
+        print(f"Only area is correct. Half point awarded. \nCorrect area : {area} \t\t Correct perimeter : {perimeter}")
         print()
         return c+0.5
     elif user_a!=area and user_p==perimeter:
-        print("Only perimeter is correct. Half point awarded.")
+        print(f"Only perimeter is correct. Half point awarded. \nCorrect area : {area} \t\t Correct perimeter : {perimeter}")
         print()
         return c+0.5
     else:
@@ -125,14 +125,14 @@ def AP_Circle(d,c):
         print()
         return c+1
     elif user_a!=area and user_c==circum:
-        print("Only circumference is correct. Half point awarded.")
+        print(f"Only circumference is correct. Half point awarded. \nCorrect area : {area} \t\t Correct circumference : {circum}")
         print()
         return c+0.5
     elif user_a==area and user_c!=circum:
-        print("Only area is correct. Half point awarded.")
+        print(f"Only area is correct. Half point awarded. \nCorrect area : {area} \t\t Correct circumference : {circum}")
         print()
         return c+0.5
     else:
-        print("None are correct. No points awarded.")
+        print(f"None are correct. No points awarded. \nCorrect area : {area} \t\t Correct circumference : {circum}")
         print()
         return c

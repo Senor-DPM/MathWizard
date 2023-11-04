@@ -29,7 +29,7 @@ def Add_Int(d,c):
         print()
         return c+1
     else:
-        print("Incorrect answer. No points given.")
+        print(f"Incorrect answer. The correct answer was {answer}. No points given.")
         print()
         return c
 
@@ -63,7 +63,7 @@ def Subtract_Int(d,c):
         print()
         return c+1
     else:
-        print("Incorrect answer. No points given.")
+        print(f"Incorrect answer. The correct answer was {answer}. No points given.")
         print()
         return c
 
@@ -97,7 +97,7 @@ def Multiply_Int(d,c):
         print()
         return c+1
     else:
-        print("Incorrect answer. No points given.")
+        print(f"Incorrect answer. The correct answer was {answer}. No points given.")
         print()
         return c
 
@@ -132,14 +132,14 @@ def Divide_Int(d,c):
         print()
         return c+1
     elif user_q!=quotient and user_r==remainder:
-        print("Only remainder correct. Half point given.")
+        print(f"Only remainder correct. Half point given. \nCorrect quotient : {quotient} \t\t Correct remainder : {remainder}")
         print()
         return c+0.5
     elif user_q==quotient and user_r!=remainder:
-        print("Only quotient correct. Half point given.")
+        print(f"Only quotient correct. Half point given. \nCorrect quotient : {quotient} \t\t Correct remainder : {remainder}")
         print()
         return c+0.5
     else:
-        print("Incorrect answer. No points given.")
+        print(f"Incorrect answer. No points given. \nCorrect quotient : {quotient} \t\t Correct remainder : {remainder}")
         print()
         return c

@@ -22,25 +22,25 @@ def SAaV_Cube(d,c):
         print("All are correct. 3 points awarded.")
         c+=3
     elif(user_tsa==TSA) and (user_csa==CSA) and (user_v!=Vol):
-        print("Only TSA & CSA are correct. 2 points awarded")
+        print(f"Only TSA & CSA are correct. 2 points awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Vol}")
         c+=2
     elif(user_tsa==TSA) and (user_csa!=CSA) and (user_v==Vol):
-        print("Only TSA & volume are correct. 2 points awarded")
+        print(f"Only TSA & volume are correct. 2 points awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Vol}")
         c+=2
     elif(user_tsa!=TSA) and (user_csa==CSA) and (user_v==Vol):
-        print("Only CSA & volume are correct. 2 points awarded")
+        print(f"Only CSA & volume are correct. 2 points awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Vol}")
         c+=2
     elif(user_tsa==TSA) and (user_csa!=CSA) and (user_v!=Vol):
-        print("Only TSA is correct. 1 point awarded")
+        print(f"Only TSA is correct. 1 point awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Vol}")
         c+=1
     elif(user_tsa!=TSA) and (user_csa==CSA) and (user_v!=Vol):
-        print("Only CSA is correct. 1 point awarded")
+        print(f"Only CSA is correct. 1 point awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Vol}")
         c+=1
     elif(user_tsa!=TSA) and (user_csa!=CSA) and (user_v==Vol):
-        print("Only volume is correct. 1 point awarded")
+        print(f"Only volume is correct. 1 point awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Vol}")
         c+=1
     else:
-        print("No correct answer. No points awarded.")
+        print(f"No correct answer. No points awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Vol}")
     return c
 
 def SAaV_Cuboid(d,c):
@@ -75,25 +75,25 @@ def SAaV_Cuboid(d,c):
         print("All answers are correct. 3 points awarded.")
         c += 3
     elif (user_tsa == TSA) and (user_csa == CSA) and (user_v != Volume):
-        print("Only TSA and CSA are correct. 2 points awarded.")
+        print(f"Only TSA and CSA are correct. 2 points awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
         c += 2
     elif (user_tsa == TSA) and (user_csa != CSA) and (user_v == Volume):
-        print("Only TSA and Volume are correct. 2 points awarded.")
+        print(f"Only TSA and Volume are correct. 2 points awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
         c += 2
     elif (user_tsa != TSA) and (user_csa == CSA) and (user_v == Volume):
-        print("Only CSA and Volume are correct. 2 points awarded.")
+        print(f"Only CSA and Volume are correct. 2 points awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
         c += 2
     elif (user_tsa == TSA) and (user_csa != CSA) and (user_v != Volume):
-        print("Only TSA is correct. 1 point awarded.")
+        print(f"Only TSA is correct. 1 point awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
         c += 1
     elif (user_tsa != TSA) and (user_csa == CSA) and (user_v != Volume):
-        print("Only CSA is correct. 1 point awarded.")
+        print(f"Only CSA is correct. 1 point awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
         c += 1
     elif (user_tsa != TSA) and (user_csa != CSA) and (user_v == Volume):
-        print("Only Volume is correct. 1 point awarded.")
+        print(f"Only Volume is correct. 1 point awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
         c += 1
     else:
-        print("No correct answers. 0 points awarded.")
+        print(f"fNo correct answers. 0 points awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
     return c
 
 def SAaV_Sphere(d,c):
@@ -122,17 +122,14 @@ def SAaV_Sphere(d,c):
     if (user_tsa == TSA) and (user_v == Volume):
         print("Both answers are correct. 2 points awarded.")
         c += 2
-        allCorrect=True
-    elif (user_tsa == TSA) or (user_v == Volume):
-        print("One answer is correct. 1 point awarded.")
+    elif (user_tsa != TSA) and (user_v == Volume):
+        print(f"Only Volume is correct. 1 point awarded. \nCorrect TSA : {TSA} \t\t Correct Volume : {Volume}")
+        c += 1
+    elif (user_tsa == TSA) and (user_v != Volume):
+        print(f"Only TSA is correct. 1 point awarded. \nCorrect TSA : {TSA} \t\t Correct Volume : {Volume}")
         c += 1
     else:
-        print("Neither answer is correct. No points awarded.")
-    if not allCorrect:
-        print("Correct Answers : ")
-        print("TSA =",TSA)
-        print("Volume :",Volume)
-        print()
+        print(f"Neither answer is correct. No points awarded.\nCorrect TSA : {TSA} \t\t Correct Volume : {Volume}")
     return c
 
 def SAaV_Cone(d, c):
@@ -166,25 +163,25 @@ def SAaV_Cone(d, c):
         print("All answers are correct. 3 points awarded.")
         c += 3
     elif (user_tsa == TSA) and (user_csa == CSA) and (user_v != Volume):
-        print("Only TSA and CSA are correct. 2 points awarded.")
+        print(f"Only TSA and CSA are correct. 2 points awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
         c += 2
     elif (user_tsa == TSA) and (user_csa != CSA) and (user_v == Volume):
-        print("Only TSA and Volume are correct. 2 points awarded.")
+        print(f"Only TSA and Volume are correct. 2 points awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
         c += 2
     elif (user_tsa != TSA) and (user_csa == CSA) and (user_v == Volume):
-        print("Only CSA and Volume are correct. 2 points awarded.")
+        print(f"Only CSA and Volume are correct. 2 points awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
         c += 2
     elif (user_tsa == TSA) and (user_csa != CSA) and (user_v != Volume):
-        print("Only TSA is correct. 1 point awarded.")
+        print(f"Only TSA is correct. 1 point awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
         c += 1
     elif (user_tsa != TSA) and (user_csa == CSA) and (user_v != Volume):
-        print("Only CSA is correct. 1 point awarded.")
+        print(f"Only CSA is correct. 1 point awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
         c += 1
     elif (user_tsa != TSA) and (user_csa != CSA) and (user_v == Volume):
-        print("Only Volume is correct. 1 point awarded.")
+        print(f"Only Volume is correct. 1 point awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
         c += 1
     else:
-        print("No answer is correct. No points awarded.")
+        print("No answer is correct. No points awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
     
     return c
 
@@ -220,24 +217,24 @@ def SAaV_Cylinder(d, c):
         print("All answers are correct. 3 points awarded.")
         c += 3
     elif (user_tsa == TSA) and (user_csa == CSA) and (user_v != Volume):
-        print("Only TSA and CSA are correct. 2 points awarded.")
+        print(f"Only TSA and CSA are correct. 2 points awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
         c += 2
     elif (user_tsa == TSA) and (user_csa != CSA) and (user_v == Volume):
-        print("Only TSA and Volume are correct. 2 points awarded.")
+        print(f"Only TSA and Volume are correct. 2 points awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
         c += 2
     elif (user_tsa != TSA) and (user_csa == CSA) and (user_v == Volume):
-        print("Only CSA and Volume are correct. 2 points awarded.")
+        print(f"Only CSA and Volume are correct. 2 points awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
         c += 2
     elif (user_tsa == TSA) and (user_csa != CSA) and (user_v != Volume):
-        print("Only TSA is correct. 1 point awarded.")
+        print(f"Only TSA is correct. 1 point awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
         c += 1
     elif (user_tsa != TSA) and (user_csa == CSA) and (user_v != Volume):
-        print("Only CSA is correct. 1 point awarded.")
+        print(f"Only CSA is correct. 1 point awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
         c += 1
     elif (user_tsa != TSA) and (user_csa != CSA) and (user_v == Volume):
-        print("Only Volume is correct. 1 point awarded.")
+        print(f"Only Volume is correct. 1 point awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
         c += 1
     else:
-        print("No answer is correct. No points awarded.")
+        print(f"No answer is correct. No points awarded.\nCorrect TSA : {TSA} \t\t Correct CSA : {CSA} \t\t Correct Volume : {Volume}")
 
     return c
