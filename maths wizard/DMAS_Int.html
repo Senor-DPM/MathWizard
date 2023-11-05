@@ -1,59 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="option.css">
+    <link rel="stylesheet" href="sub.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <div class="options-container">
-        <h2>Select an Option</h2>
-        <div class="slider-container">
-          <input type="range" min="1" max="7" value="1" class="slider" id="optionSlider">
-        </div>
-        <div class="options">
-          <div class="option-box" data-value="1">Basic Operations - Whole Numbers</div>
-          <div class="option-box" data-value="2">Basic Operations - Integers</div>
-          <div class="option-box" data-value="3">Basic Operations - Rational</div>
-          <div class="option-box" data-value="4">Area and Perimeter</div>
-          <div class="option-box" data-value="5">Surface Area and Volume</div>
-          <div class="option-box" data-value="6">Linear and Quadratic Equations</div>
-          <div class="option-box" data-value="7">Fractions</div>
-        </div>
-      </div>
-
-      <button onclick="goBack()" class="goback-button"><font color="white">Go Back</font></button>
+    <h2>Select an Option</h2>
     
+    <div class="container">
+        <div class="box">Addition</div>
+        <div class="box">Subtraction</div>
+        <div class="box">Multiplication</div>
+        <div class="box">Division</div>
+        <button onclick="goBack()" class="goback-button"><font color="white">Go Back</font></button>
+    </div>
 
-      <script>
-          function goBack() {
-              window.history.back();
-          }
-      </script>
-
-      <script>
-        const slider = document.getElementById('optionSlider');
-        const options = document.querySelectorAll('.option-box');
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
       
-        options.forEach(option => {
-          option.addEventListener('click', () => {
-            const value = option.getAttribute('data-value');
-            slider.value = value;
-          });
-        });
-      
-        slider.addEventListener('input', () => {
-          const value = slider.value;
-          options.forEach(option => {
-            if (option.getAttribute('data-value') === value) {
-              option.click();
-            }
-          });
-        });
-      </script>
-      
-      </body>
-      </html>
 </body>
 </html>
