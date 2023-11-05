@@ -59,9 +59,9 @@ h2{
     display: inline-block;
     font-size: 16px;
     margin: 40px;
-    position: absolute;
-    left: 260px;
-    bottom: -70px;
+    position: relative;
+    left: 235px;
+    bottom: -10px
   }
   .goback-button:hover {
     background-color: #6161a7;
